@@ -17,6 +17,13 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x gradlew
       
+      - name: Debug
+        run: |
+          pwd
+          ls -la
+          ls -la gradle/wrapper || true
+          file gradlew || true
+    
       - name: Build Debug APK
         run: ./gradlew assembleDebug --stacktrace
       
