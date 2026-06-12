@@ -16,6 +16,10 @@ jobs:
       
       - name: Make gradlew executable
         run: chmod +x gradlew
+
+      - name: Fix gradlew
+        run: |
+          sed -i 's/\r$//' gradlew
       
       - name: Debug
         run: |
